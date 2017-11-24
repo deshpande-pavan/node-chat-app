@@ -1,6 +1,6 @@
 var socket = io();
 
-socket.on('connect', function() {
+socket.on('connect', function () {
     console.log('Connected to server.');
 
     socket.emit('createMessage', {
@@ -9,7 +9,7 @@ socket.on('connect', function() {
     });
 });
 
-socket.on('disconnect', function() {
+socket.on('disconnect', function () {
     console.log('Disconnected from server.');
 });
 
@@ -23,7 +23,7 @@ socket.on('disconnect', function() {
 //     sentAt:new Date()
 // });
 
-socket.on('newMessage',function(newMessage){
-    console.log('New Message:',newMessage);
+socket.on('newMessage', function (newMessage) {
+    console.log('New Message:', newMessage);
 });
 

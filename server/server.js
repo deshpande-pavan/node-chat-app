@@ -29,13 +29,13 @@ io.on('connection', (socket) => {
     // });
 
     socket.on('createMessage', (newMessage) => {
-        console.log('New Message',newMessage);
+        console.log('New Message', newMessage);
     });
 
-    socket.emit('newMessage',{
-        from:"pavan",
-        text:"Hey, man",
-        createdAt:new Date()
+    socket.emit('newMessage', {
+        from: "pavan",
+        text: "Hey, man",
+        createdAt: new Date()
     });
 
     socket.on('disconnect', () => {
